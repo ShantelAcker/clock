@@ -1,0 +1,14 @@
+#container {
+    text-align: center;
+    margin-top: 40vh;
+}
+
+#date {
+    font-size: 40 px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#time {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 64px;
+}
