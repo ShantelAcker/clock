@@ -3,10 +3,11 @@ var displayDate = document.getElementById("date");
 var displayTime = document.getElementById("time");
 
 //getting and displaying the current date
-var d = new Date(); //make the date variable accessible everywhere
 
+var m = setInterval(showDate, 5000);
 function showDate()
 {
+    var d = new Date();
     function fullMonth(d)
     {
         var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -23,8 +24,13 @@ function showDate()
 showDate();
 
 //getting and displaying the current time
+var myVar = setInterval(showTime, 1000);
+
+
+var t = setInterval(showTime, 1000);
 function showTime() 
 {
+    var d = new Date();
     var hours = d.getHours();
     var minutes = d.getMinutes();
     var seconds = d.getSeconds();
@@ -44,23 +50,21 @@ function showTime()
     }
 
     //avoiding single digits in the time
-    if (minutes < 10)
-    {
-        minutes = '0' + minutes;
-    }
-    if (seconds < 10)
-    {
-        minutes = '0' + minutes;
-    }
+    hours = updateTime(hours);
+    minutes = updateTime(minutes);
+    seconds = updateTime(seconds);
 
-    var currentTime = hours + ":" + minutes + ":" + seconds + " " + meridian;
-    displayTime.innerHTML = currentTime;
+    fullTimeString = hours + ":" + minutes + ":" + seconds + " " + meridian;
+    time.innerHTML = fullTimeString;
 }
 
-showTime();
-
-//making the time update constantly
-
+function updateTime(n) {
+    if (n < 10) {
+        return "0" + n;
+    } else {
+        return n;
+    }
+}
 
 //allowing the user to choose a background color or image
 
