@@ -1,28 +1,28 @@
 #container {
     position: fixed;
-    text-align: center;
     top: 50%;                           /* these lines ensure it will always been in the exact center of the screen */
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-
 #date {
-    font-size: 40 px;
+    font-size: 2em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: 10px;
 }
 
 #time {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10vw;
-    border-style: solid;
-    border-radius: 10px;
+    font-size: 6em;
+    /* border-style: solid;
+    border-radius: 10px; */
     padding: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 body {
-    color: slategray;
-    background-color: rgb(3, 3, 26);
+    color: #708090;
+    background-color: #03031a;
 }
