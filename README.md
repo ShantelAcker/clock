@@ -1,2 +1,3 @@
 # javascript-clock
- a simple javascript clock that allows the user to change the background
+# link:  https://shantelacker.github.io/javascript-clock/. 
+just a simple javascript clock :)
