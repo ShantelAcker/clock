@@ -6,7 +6,7 @@ const displayDate = document.getElementById("date");
 
 const day = setInterval(showDate, 5000);
 function showDate() {
-    var d = new Date();
+    let d = new Date();
     function fullMonth(d)
     {
         var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -14,10 +14,10 @@ function showDate() {
         return month[d.getMonth()];
     }
 
-    var currentDay = d.getDate();
-    var currentYear = d.getFullYear();
+    let currentDay = d.getDate();
+    let currentYear = d.getFullYear();
 
-    var fullDateString = fullMonth(d) + ' ' + currentDay + ', ' + currentYear;
+    let fullDateString = fullMonth(d) + ' ' + currentDay + ', ' + currentYear;
     displayDate.innerHTML = fullDateString;
 }
 // have to call showDate once or the date won't show at first
