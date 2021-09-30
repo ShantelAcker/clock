@@ -26,12 +26,12 @@ showDate();
 // getting and displaying the current time
 const time = setInterval(showTime, 1000);
 function showTime()  {
-    var d = new Date();
-    var hours = d.getHours();
-    var minutes = d.getMinutes();
-    var seconds = d.getSeconds();
-    var meridian = "am";
-    var noon = 12;
+    let d = new Date();
+    let hours = d.getHours();
+    let minutes = d.getMinutes();
+    let seconds = d.getSeconds();
+    let meridian = "am";
+    let noon = 12;
 
     //changing from AM to PM
     if (hours >= noon) {
