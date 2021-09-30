@@ -1,12 +1,11 @@
-//creating variable to change the html content
-var displayDate = document.getElementById("date");
-var displayTime = document.getElementById("time");
+// accessing html elements
+const displayTime = document.getElementById("time");
+const displayDate = document.getElementById("date");
 
-//getting and displaying the current date
+// getting and displaying the current date
 
-var m = setInterval(showDate, 5000);
-function showDate()
-{
+const day = setInterval(showDate, 5000);
+function showDate() {
     var d = new Date();
     function fullMonth(d)
     {
@@ -21,15 +20,12 @@ function showDate()
     var fullDateString = fullMonth(d) + ' ' + currentDay + ', ' + currentYear;
     displayDate.innerHTML = fullDateString;
 }
+// have to call showDate once or the date won't show at first
 showDate();
 
-//getting and displaying the current time
-var myVar = setInterval(showTime, 1000);
-
-
-var t = setInterval(showTime, 1000);
-function showTime() 
-{
+// getting and displaying the current time
+const time = setInterval(showTime, 1000);
+function showTime()  {
     var d = new Date();
     var hours = d.getHours();
     var minutes = d.getMinutes();
@@ -38,8 +34,7 @@ function showTime()
     var noon = 12;
 
     //changing from AM to PM
-    if (hours >= noon)
-    {
+    if (hours >= noon) {
         meridian = "pm";
     }
 
@@ -55,7 +50,7 @@ function showTime()
     seconds = updateTime(seconds);
 
     fullTimeString = hours + ":" + minutes + ":" + seconds + " " + meridian;
-    time.innerHTML = fullTimeString;
+    displayTime.innerHTML = fullTimeString;
 }
 
 function updateTime(n) {
@@ -65,6 +60,4 @@ function updateTime(n) {
         return n;
     }
 }
-
-//allowing the user to choose a background color or image
 

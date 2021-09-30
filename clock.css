@@ -1,28 +1,38 @@
-#container {
-    position: fixed;
-    top: 50%;                           /* these lines ensure it will always been in the exact center of the screen */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#date {
-    font-size: 2em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 10px;
+.container {
+    /* margin: 0 auto;
+    text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12em;
+    font-family: 'Gemunu Libre', sans-serif;
 }
 
-#time {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 6em;
-    /* border-style: solid;
-    border-radius: 10px; */
-    padding: 20px;
+.time {
+    font-size: 8em;
     font-weight: 500;
     text-align: center;
+    letter-spacing: .1em;
 }
+
+.date {
+    font-size: 3em;
+    font-weight: normal;
+    margin-top: 2em;
+}
+
 
 body {
     color: #708090;
-    background-color: #03031a;
+    background-color: #121212;
 }
